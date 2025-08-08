@@ -1,0 +1,36 @@
+# 💳 Credit Card Fraud Detector
+
+A multilingual Streamlit app for **credit card fraud detection** with live currency conversion, flexible time units, and AI-powered risk analysis.
+
+
+## ✨ Features
+- Supports **English**, **Arabic**, **Spanish**, **French**, and **Japanese**
+- Live currency conversion for **USD, SAR, EUR, GBP, JPY** (auto-updated)
+- Flexible time units: **seconds, minutes, hours, days, weeks, months, years**
+- Hybrid risk detection using **model probability + rule-based checks**
+- Confidence score with risk levels: **Low, Mid, High**
+- Detailed transaction breakdown for **audit purposes**
+- History table of checks (**downloadable as CSV**)
+- **RTL layout** support for Arabic
+
+
+## 🚀 How to Run
+1. Install dependencies:
+```bash
+pip install -r requirements.txt
+Run the app:
+```bash
+python -m streamlit run app/app.py
+```
+##📂 Project Structure
+project/
+│── app/
+│    └── app.py
+│── models/
+│    ├── fraud_model.pkl
+│    ├── fraud_scaler.pkl
+│    ├── fraud_median_features.pkl
+│    └── amount_99th_percentile.pkl
+│── requirements.txt
+│── runtime.txt
+│── README.md

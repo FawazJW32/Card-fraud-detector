@@ -1,0 +1,15 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+imbalanced-learn
+jupyter
+streamlit
+gradio
+joblib
+xgboost
+lightgbm
+shap
+ipykernel
+streamlit
