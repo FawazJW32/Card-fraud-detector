@@ -34,3 +34,17 @@ project/
 │── requirements.txt
 │── runtime.txt
 │── README.md
+
+
+
+## Download Dataset & Model
+
+This project requires the dataset and trained model to run.
+
+- **Dataset:** [Download here](https://drive.google.com/drive/folders/1ZBFXuRGeV5NgqVMojrB66boYK5_u3enU?usp=sharing)
+- **Model:** [Download here](https://drive.google.com/drive/folders/1MBObrwVyBV6vxMRxxLtyeUdpy0nB3NzZ?usp=sharing)
+
+Place them in:
+project-root/
+├── data/creditcard.csv
+├── models/fraud_model.pkl
