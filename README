@@ -1,50 +1,93 @@
-# 💳 Credit Card Fraud Detector
+💳 Credit Card Fraud Detector
+A multilingual Streamlit web application that detects potential credit card fraud with AI-powered predictions, live currency conversion, flexible time units, and multi-language support. The model is trained on real transaction data to identify fraudulent activity with high accuracy.
 
-A multilingual Streamlit app for **credit card fraud detection** with live currency conversion, flexible time units, and AI-powered risk analysis.
+📄 Overview
+This project uses a Logistic Regression model trained on a credit card transactions dataset. It supports English, Arabic, Spanish, French, and Japanese interfaces, allowing users to input transaction amount, time since the last transaction, and currency. The app predicts whether a transaction is fraudulent and displays confidence levels, risk categories, and a downloadable audit history.
 
+✨ Features
+🌍 Multilingual Support – English, Arabic (RTL), Spanish, French, Japanese.
 
-## ✨ Features
-- Supports **English**, **Arabic**, **Spanish**, **French**, and **Japanese**
-- Live currency conversion for **USD, SAR, EUR, GBP, JPY** (auto-updated)
-- Flexible time units: **seconds, minutes, hours, days, weeks, months, years**
-- Hybrid risk detection using **model probability + rule-based checks**
-- Confidence score with risk levels: **Low, Mid, High**
-- Detailed transaction breakdown for **audit purposes**
-- History table of checks (**downloadable as CSV**)
-- **RTL layout** support for Arabic
+💱 Live Currency Conversion – USD, SAR, EUR, GBP, JPY (auto-updated rates).
 
+⏳ Flexible Time Units – Seconds, Minutes, Hours, Days, Weeks, Months, Years.
 
-## 🚀 How to Run
-1. Install dependencies:
-```bash
-pip install -r requirements.txt
-Run the app:
-```bash
-python -m streamlit run app/app.py
-```
-##📂 Project Structure
-project/
-│── app/
-│    └── app.py
-│── models/
-│    ├── fraud_model.pkl
-│    ├── fraud_scaler.pkl
-│    ├── fraud_median_features.pkl
-│    └── amount_99th_percentile.pkl
-│── requirements.txt
-│── runtime.txt
-│── README.md
+🔍 Hybrid Risk Detection – Model probability + rule-based checks.
 
+📊 Confidence Meter – Low, Medium, High risk display.
 
+🗂 Audit-Friendly Logs – Transaction check history downloadable as CSV.
 
-## Download Dataset & Model
+🕌 RTL Layout – Arabic UI adapts automatically.
 
-This project requires the dataset and trained model to run.
+🧠 Machine Learning Details
+The model is a Logistic Regression classifier trained on the Credit Card Fraud Detection dataset.
 
-- **Dataset:** [Download here](https://drive.google.com/drive/folders/1ZBFXuRGeV5NgqVMojrB66boYK5_u3enU?usp=sharing)
-- **Model:** [Download here](https://drive.google.com/drive/folders/1MBObrwVyBV6vxMRxxLtyeUdpy0nB3NzZ?usp=sharing)
+Handles imbalanced classes with class weighting.
+
+Scaler applied to normalize features.
+
+Custom percentile-based high-amount alerts.
+
+Outputs fraud probability score for better interpretability.
+
+🛠 Tools and Technologies
+Python
+
+Streamlit – Web app framework
+
+Scikit-learn – Model training and evaluation
+
+Pandas / NumPy – Data preprocessing
+
+Matplotlib – Confidence bar visualization
+
+Google Drive – Dataset and model hosting
+
+Babel – Internationalization (i18n)
+
+📂 Files Included
+bash
+Copy
+Edit
+app/
+ └── app.py                # Main Streamlit application
+models/
+ ├── fraud_model.pkl       # Trained Logistic Regression model
+ ├── fraud_scaler.pkl      # StandardScaler object
+ ├── fraud_median_features.pkl  # Median feature values for predictions
+ └── amount_99th_percentile.pkl # Amount threshold reference
+requirements.txt           # Python dependencies
+runtime.txt                # Runtime environment spec
+README.md                  # Project documentation
+📥 Download Dataset & Model
+The dataset and trained model are hosted on Google Drive due to size limits on GitHub.
+
+📄 Dataset → https://drive.google.com/drive/folders/1ZBFXuRGeV5NgqVMojrB66boYK5_u3enU?usp=sharin
+
+🤖 Model & Pickle Files → https://drive.google.com/drive/folders/1MBObrwVyBV6vxMRxxLtyeUdpy0nB3NzZ?usp=sharing
 
 Place them in:
+
+
 project-root/
-├── data/creditcard.csv
-├── models/fraud_model.pkl
+ ├── data/creditcard.csv
+ └── models/
+🚀 How to Run the Project Locally
+1️⃣ Clone the repository
+
+
+git clone https://github.com/FawazJW32/Card-fraud-detector.git
+cd Card-fraud-detector
+2️⃣ Install dependencies
+
+
+pip install -r requirements.txt
+3️⃣ Run the application
+
+bash
+Copy
+Edit
+python -m streamlit run app/app.py
+4️⃣ Open in Browser
+Visit: http://localhost:8501
+
